@@ -1,13 +1,13 @@
-
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: "./",
   build: {
     rollupOptions: {
-      external: ['react', 'react-dom'], // Add other external dependencies here
+      // External dependencies here only if they are loaded from external sources like CDNs
+      // external: ['react', 'react-dom'],
     },
   },
 });
